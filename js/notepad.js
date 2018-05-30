@@ -16,6 +16,7 @@ Notes.prototype.allNotes = function () {
 Notes.prototype.addNote = function () {
   let text = document.getElementById('new_note').value
   this.notesArray.push(text)
+  document.getElementById('new_note').value = '';
   this.allNotes()
 
 }
