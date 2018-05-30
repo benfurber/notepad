@@ -19,15 +19,13 @@ var assert = {
     consoleGreen(`Test passed: ${resultToCheck} is equal to ${expectedResult}`)
   },
   isEmpty: (resultToCheck) => {
-    consoleRed('WARNING: This is no longer advised, use isArrayEmpty() instead')
-
-    if (!(resultToCheck.length === 0)) {
+    if (!(Object.keys(resultToCheck).length === 0)) {
       throw new Error(`Test failed: object is not empty`)
     }
     consoleGreen(`Test passed: object is empty`)
   },
   contains: (container, resultToFind) => {
-    consoleRed('WARNING: This is no longer advised, use arrayContains() instead')
+    consoleRed('WARNING: "contains()" is no longer advised, use "arrayContains()" instead')
 
     if (!(container.includes(resultToFind))) {
       throw new Error(`Test failed: ${resultToFind} is not in ${container}`)
@@ -39,12 +37,6 @@ var assert = {
       throw new Error(`Test failed: ${object} is not an array`)
     }
     consoleGreen(`Test passed: ${object} is an array`)
-  },
-  isArrayEmpty: (resultToCheck) => {
-    if (!(resultToCheck.length === 0)) {
-      throw new Error(`Test failed: object is not empty`)
-    }
-    consoleGreen(`Test passed: object is empty`)
   },
   arrayContains: (container, resultToFind) => {
     if (!(container.includes(resultToFind))) {

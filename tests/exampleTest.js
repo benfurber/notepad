@@ -30,12 +30,6 @@ function objectIsAnArray() {
 
 objectIsAnArray()
 
-function arrayIsEmpty() {
-  assert.isArrayEmpty(testReturnValues.emptyArray)
-};
-
-arrayIsEmpty()
-
 function arrayDoesContain() {
   assert.arrayContains(testReturnValues.notEmptyArray, "dog")
 };
