@@ -3,18 +3,18 @@ function Notes () {
 }
 
 Notes.prototype.allNotes = function () {
-  for(i=0; i=this.notesArray.length(); i++){
-    var node = document.createElement('LI');
-    var textnode = document.createTextNode(this.notesArray[i].content);
-    node.appendChild(textnode);
-    document.getElementById('snippets').appendChild(node);
-    console.log(this.notesArray);
+  for (var entry of this.notesArray) {
+    var node = document.createElement('LI')
+    var textnode = document.createTextNode(entry)
+    node.appendChild(textnode)
+    document.getElementById('snippets').appendChild(node)
   }
 }
 
 Notes.prototype.addNote = function () {
-  this.notesArray.push({ 'content': document.getElementById('new_note').value });
-  this.allNotes();
+  let text = document.getElementById('new_note').value
+  this.notesArray.push(text)
+  this.allNotes()
 
 }
 
