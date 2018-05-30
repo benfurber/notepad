@@ -3,11 +3,11 @@ function Notes () {
 }
 
 Notes.prototype.allNotes = function () {
-  //display list of notes
+  // display list of notes
 }
 
 Notes.prototype.addNote = function () {
-  this.notesArray.push({ 'content': document.getElementById("new_note").value })
+  this.notesArray.push({ 'content': document.getElementById('new_note').value })
 }
 
 var notes = new Notes()
