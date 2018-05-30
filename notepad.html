@@ -5,7 +5,7 @@
   <script src="./js/notepad.js"></script>
 </head>
 <body>
-  <div id='trump'>
+  <div id='input_area'>
   <h1>Notes</h1>
     <textarea id='new_note' name='note' rows="10" cols="50"></textarea>
     <br>
@@ -17,10 +17,8 @@
    </ol>
  </div>
 </div>
- <div id='full_notes'>
-    Random text
-    <br>
-    <input id='back_button' type='button' value='Back'>
+ <div id='full_notes' hidden>
+    <input onclick="notes.hideNote()" id='back_button' type='button' value='Back'>
  </div>
 </body>
 </html>
