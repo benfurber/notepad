@@ -23,3 +23,21 @@ function objectDoesContain() {
 };
 
 objectDoesContain()
+
+function objectIsAnArray() {
+  assert.isAnArray(testReturnValues.anArray)
+}
+
+objectIsAnArray()
+
+function arrayIsEmpty() {
+  assert.isArrayEmpty(testReturnValues.emptyArray)
+};
+
+arrayIsEmpty()
+
+function arrayDoesContain() {
+  assert.arrayContains(testReturnValues.notEmptyArray, "dog")
+};
+
+arrayDoesContain()
