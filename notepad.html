@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Notes</title>
+  <script src="./js/notepad.js"></script>
 </head>
 <body>
   <div id='trump'>
@@ -9,7 +10,7 @@
   <form>
     <textarea id='new_note' name='note' rows="10" cols="50"></textarea>
     <br>
-    <input id='submit_button' type='submit' value='Submit'>
+    <input onclick="notes.addNote()" id='submit_button' type='submit' value='Submit'>
   </form>
 
  <div id='note_snippets'>
