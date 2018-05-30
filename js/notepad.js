@@ -3,6 +3,8 @@ function Notes () {
 }
 
 Notes.prototype.allNotes = function () {
+  var element = document.getElementById('snippets')
+  element.innerHTML = '';
   for (var entry of this.notesArray) {
     var node = document.createElement('LI')
     var textnode = document.createTextNode(entry)
