@@ -45,3 +45,21 @@ var assert = {
     consoleGreen(`Test passed: ${resultToFind} is in ${container}`)
   }
 }
+
+let describe = (description, callback) => {
+  try {
+    console.log(description)
+    callback()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+let it = (description, callback) => {
+  try {
+    console.log(description)
+    callback()
+  } catch (error) {
+    console.log(error)
+  }
+}
