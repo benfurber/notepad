@@ -64,12 +64,10 @@ let it = (description, callback) => {
   }
 }
 
-let spy = (functionUnderTest, method) => {
-  let counter = 0
-  functionUnderTest = {
-    method: function () {
-      counter += 1
-      consoleGreen(counter)
-    }
+let respondsTo = (funkyFunction, callback) => {
+  try {
+    callback in funkyFunction ? consoleGreen(`${callback} exists`) : consoleRed(`${callback} does not exist`)
+  } catch (e) {
+    consoleRed(`${callback} does not exist` + e )
   }
 }
