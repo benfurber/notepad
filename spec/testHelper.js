@@ -63,3 +63,13 @@ let it = (description, callback) => {
     console.log(error)
   }
 }
+
+let spy = (functionUnderTest, method) => {
+  let counter = 0
+  functionUnderTest = {
+    method: function () {
+      counter += 1
+      consoleGreen(counter)
+    }
+  }
+}

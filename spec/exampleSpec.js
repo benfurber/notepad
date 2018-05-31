@@ -12,4 +12,7 @@ describe('A sample test', function () {
   it('is true-ish (the true test)', function () {
     assert.isTrue(testReturnValues.trueStatement == true)
   })
+  it('should spy on function', function () {
+    spy(testReturnValues, 'tester')
+  })
 })
