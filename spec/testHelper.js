@@ -61,3 +61,21 @@ let it = (description, callback) => {
     consoleRed(error)
   }
 }
+
+let respondsTo = (funkyFunction, callback) => {
+  try {
+    callback in funkyFunction ? consoleGreen(`${callback} exists`) : consoleRed(`${callback} does not exist`)
+  } catch (e) {
+    consoleRed(`${callback} does not exist` + e )
+  }
+}
+
+let spyOn = (funkyObject, funkyMethod) => {
+  try {
+    funkyObject[funkyMethod] = function () {
+      console.log(`${funkyMethod} has been called`)
+    }
+  } catch (e) {
+    console.log(e)
+  }
+}
